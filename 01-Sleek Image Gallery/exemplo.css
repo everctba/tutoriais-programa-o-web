@@ -1,17 +1,28 @@
-.grid {
+.body{
+
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hi{
+   font-family: arial;
+}
+.gallery {
    transition: all 400ms ease;
-   display: grid;
-   height: 80vh;
-   width: 55%;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   display: flex;
+   height: 70vh;
+   max-width: 60%;
+   gap: 1rem;
+   
 
 }
 
 .centro {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
+   
    justify-content: center;
    align-items: center;
+   /* width:  100%; */
    height: 100vh;
 }
 
@@ -19,14 +30,19 @@
 
 
 .size-normal {
-
+   flex:2;
+   display: flex;
+   border-radius: 0.75rem;
    transition: all 400ms ease;
    width: 1fr;
+   width:  100%;
+   height: 100%;
+   width: 250px;
 }
 
 .size-normal:hover {
    transition: all 400ms ease;
-   width: 200px;
+   flex:5;
    background-color: rgb(26, 15, 12) !important;
 }
 
