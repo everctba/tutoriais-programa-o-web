@@ -1,0 +1,66 @@
+/* baseado no tutorial da envato:https://youtu.be/vqXLGX0szIQ?si=kXpZ10c8zUDSUEna&t=9972 */
+
+
+.pagina {
+   display: flex;
+   justify-content: center;
+}
+
+.centro {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   width: 70%;
+   background-color: antiquewhite;
+   justify-content: center;
+   align-items: center;
+   /* width:  100%; */
+   height: 100vh;
+}
+
+.esquerda {
+   font-size: 5rem;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   /* background-color: rgb(255, 156, 27); */
+}
+
+.direita {
+
+   width: 100%;
+   background-color: rgb(137, 255, 27);
+}
+
+.compound {
+   width: 100%;
+   margin: 38px;
+   display: flex;
+   flex-direction: column;
+
+}
+
+#texto {
+   width: 60%;
+   line-height: 1.4rem;
+   margin-top: 16px;
+}
+
+/* Fontes do google */
+.libre-baskerville-regular {
+   font-family: "Libre Baskerville", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.libre-baskerville-bold {
+   font-family: "Libre Baskerville", serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+   font-family: "Libre Baskerville", serif;
+   font-weight: 400;
+   font-style: italic;
+}
