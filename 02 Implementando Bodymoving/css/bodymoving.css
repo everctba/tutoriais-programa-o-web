@@ -149,8 +149,8 @@ table {
 .quadrado {
    z-index: 5;
    background-color: rgb(4, 104, 37);
-   width: 250px;
-   height: 250px;
+   width: 150px;
+   height: 150px;
    border-radius: 1.5rem;
    transition: all 400ms ease;
    cursor: pointer;
@@ -159,8 +159,7 @@ table {
 
 .quadrado:hover {
    background-color: rgb(4, 104, 37);
-   width: 250px;
-   height: 250px;
+
    border-radius: 1.5rem;
    transform: scale(1.04);
    pointer-events: node;
@@ -168,16 +167,15 @@ table {
 
 .quadrado:active {
    background-color: rgb(43, 235, 107);
-   width: 250px;
-   height: 250px;
+
    border-radius: 1.5rem;
    transform: scale(1.04);
 }
 
 .bm {
-   background-color: rgba(166, 212, 182, 0.589);
-   width: 550px;
-   height: 550px;
+   /* background-color: rgba(166, 212, 182, 0.589); */
+   width: 350px;
+   height: 350px;
    z-index: 1;
    position: absolute;
 
