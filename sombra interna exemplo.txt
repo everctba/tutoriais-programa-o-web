@@ -1,0 +1,1 @@
+box-shadow: inset 0 0px 86px 0 rgb(0 0 0 / 49%);
