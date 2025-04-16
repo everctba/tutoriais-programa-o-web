@@ -5,8 +5,8 @@ var anim = document.querySelector('.bm');
 var itemAnima = lottie.loadAnimation({
    wrapper: anim,
    animType: 'svg',
-   loop: false,
-   autoplay: false,
+   loop: true,
+   autoplay: true,
    path:  './js/data.json'
 });
 console.log(botao);
