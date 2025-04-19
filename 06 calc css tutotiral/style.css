@@ -1,0 +1,31 @@
+.container {
+   background-color: aqua;
+   width: calc(100vw - 190px);
+   /* background-size: 525px 880px; */
+   /* aspect-ratio: 100/3; */
+   height: 88px;
+   margin-top: 38px;
+   border-radius: 26px;
+   position: fixed;
+}
+
+.bodyblack {
+
+   background-color: #111118;
+   display: flex;
+   justify-content: center;
+}
+
+.corpo {
+   width: calc(100vw - 190px);
+   height: 3000px;
+   margin-top: 175px;
+
+   font-size: 44px;
+   background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+}
+
+.texto {
+
+   padding: 44px;
+}
