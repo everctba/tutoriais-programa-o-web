@@ -1,0 +1,10 @@
+.borda-gradiente {
+   width: 300px;
+   height: 291px;
+   /* inset: 8px; */
+   border: double 18px #ffffff;
+   border-radius: 40px;
+   background-image: linear-gradient(white, #464141), radial-gradient(circle at top left, #db7878, #3020ff);
+   background-origin: border-box;
+   background-clip: content-box, border-box;
+}
