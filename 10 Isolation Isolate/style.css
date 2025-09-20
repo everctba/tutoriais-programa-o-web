@@ -1,0 +1,75 @@
+/* https://www.youtube.com/shorts/zgYiqFI-134 */
+/* https://www.youtube.com/shorts/2g38QfV2I9Y */
+.circulo1 {
+   height: 350px;
+   width: 350px;
+   position: absolute;
+   border-radius: 200px;
+   background-image: radial-gradient(circle at top left, #ff7f23, #ff5900);
+   mix-blend-mode: difference;
+}
+
+.circulo2 {
+   height: 350px;
+   width: 350px;
+   position: absolute;
+   left: 200px;
+   border-radius: 200px;
+   background-image: radial-gradient(circle at top left, #23d7ff, #007bff);
+   mix-blend-mode: difference;
+}
+
+.DoisCirculos {
+   position: relative;
+   margin-inline: auto;
+   width: 230px;
+   isolation: isolate;
+   /* filter: invert(1); */
+}
+
+
+/* BBBBBB */
+.circulo1B {
+   height: 350px;
+   width: 350px;
+   position: absolute;
+   border-radius: 200px;
+   background-image: radial-gradient(circle at top left, #ff7f23, #ff5900);
+   mix-blend-mode: difference;
+
+}
+
+.circulo2B {
+   height: 350px;
+   width: 350px;
+   position: absolute;
+   left: 200px;
+   border-radius: 200px;
+   background-image: radial-gradient(circle at top left, #23d7ff, #007bff);
+   mix-blend-mode: difference;
+
+}
+
+.DoisCirculosB {
+   top: 500px;
+   position: relative;
+   margin-inline: auto;
+   width: 230px;
+
+   /* isolation: isolate; */
+
+}
+
+body {
+
+   background-image: url("https://images.pexels.com/photos/310452/pexels-photo-310452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+   /* margin: auto; */
+   /* margin-left: 31%; */
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   /* filter: invert(1); */
+}
