@@ -3,66 +3,59 @@
 .circulo1 {
    height: 350px;
    width: 350px;
-   position: absolute;
+   /* position: absolute; */
    border-radius: 200px;
    background-image: radial-gradient(circle at top left, #ff7f23, #ff5900);
-   mix-blend-mode: difference;
+   /* mix-blend-mode: difference; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 31;
 }
 
 .circulo2 {
    height: 350px;
    width: 350px;
+   top: -100px;
    position: absolute;
    left: 200px;
    border-radius: 200px;
    background-image: radial-gradient(circle at top left, #23d7ff, #007bff);
-   mix-blend-mode: difference;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 32;
+   /* mix-blend-mode: difference; */
 }
 
 .DoisCirculos {
    position: relative;
    margin-inline: auto;
    width: 230px;
-   isolation: isolate;
-   /* filter: invert(1); */
-}
-
-
-/* BBBBBB */
-.circulo1B {
-   height: 350px;
-   width: 350px;
-   position: absolute;
-   border-radius: 200px;
-   background-image: radial-gradient(circle at top left, #ff7f23, #ff5900);
-   mix-blend-mode: difference;
-
-}
-
-.circulo2B {
-   height: 350px;
-   width: 350px;
-   position: absolute;
-   left: 200px;
-   border-radius: 200px;
-   background-image: radial-gradient(circle at top left, #23d7ff, #007bff);
-   mix-blend-mode: difference;
-
-}
-
-.DoisCirculosB {
-   top: 500px;
-   position: relative;
-   margin-inline: auto;
-   width: 230px;
-
    /* isolation: isolate; */
-
+   z-index: 40;
 }
+
+.lorem {
+
+   width: 300px;
+   margin: auto;
+   margin-top: 20px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   text-align: center;
+   z-index: 50;
+   position: relative;
+   top: -600px;
+}
+
+
+
 
 body {
 
-   background-image: url("https://images.pexels.com/photos/310452/pexels-photo-310452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+   background-color: black;
    /* margin: auto; */
    /* margin-left: 31%; */
    background-size: cover;
