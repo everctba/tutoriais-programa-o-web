@@ -197,3 +197,52 @@ button:active {
     box-shadow: inset 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.1);
     border: 1px solid #707070;
 }
+
+#aqua {
+    background: linear-gradient(to bottom, #9adeff 0%, #308ff4 49%, #0569e5 50%, #4cb8fa 100%);
+    border-radius: 50px;
+    padding: 6px 30px;
+    color: white;
+    font-family: "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.9),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.4);
+    border: 1px solid #1459a3;
+}
+
+/* Baseando Estritamente na Imagem Transferida (Mac Classic UI) */
+#mac-classic-grey {
+    /* Cinza platina quebrando no meio do eixo vertical */
+    background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 45%, #ececec 50%, #f0f0f0 100%);
+    border: 1px solid #999999;
+
+    /* Geometria de borda estrita - caixa compacta quase redonda */
+    border-radius: 4px;
+    padding: 4px 18px;
+    color: #000000;
+
+    /* Tipografia primária exata ("Lucida Grande" corporativa) */
+    font-family: "Lucida Grande", "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#mac-classic-blue {
+    /* Gradiente azul de confirmação padrão OS X */
+    background: linear-gradient(to bottom, #c6e3ff 0%, #90cbfb 45%, #76bbf8 50%, #a4d8fb 100%);
+    border: 1px solid #6385a8;
+
+    /* Geometria de borda idêntica emparelhada com o modelo Cinza contíguo */
+    border-radius: 4px;
+    padding: 4px 18px;
+    color: #000000;
+
+    /* Tipografia primária exata da imagem */
+    font-family: "Lucida Grande", "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
