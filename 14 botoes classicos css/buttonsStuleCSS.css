@@ -1,0 +1,199 @@
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    /* Suaviza as entranhas mecânicas pra evitar aquele clique artificial travado */
+    transition: filter 0.15s ease, transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+/* Injeção do sistema Universal de Estados focado na UX Tátil do Desktop */
+button:hover {
+    filter: brightness(1.15);
+    /* Aumenta a luminosidade em 15% pra ascender o gradiente */
+}
+
+button:active {
+    filter: brightness(0.92);
+    /* Gera obstrução da luz da interface abaixando o brilho */
+    transform: translateY(2px);
+    /* Abaixamento mecânico no Eixo-Y para feedback de clique pesado */
+}
+
+#green {
+    background: linear-gradient(#f0ff35, #a9ff00);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+    color: #395306;
+    padding: 8px 16px;
+}
+
+#round-red {
+    background: linear-gradient(#ff5400, #be1d00);
+    border-radius: 30px;
+    color: white;
+    padding: 8px 16px;
+}
+
+#bevel-grey {
+    background: linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%);
+    border-radius: 8px;
+    color: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6), inset 0 1px 0 white, inset 0 -1px 0 #dddddd;
+    padding: 8px 16px;
+}
+
+#glass-grey {
+    background: linear-gradient(#d6d6d6 50%, white 100%);
+    border-radius: 30px;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), inset 0 1px 1px white;
+    padding: 8px 16px;
+}
+
+#shiny-orange {
+    background: linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%);
+    border-radius: 30px;
+    color: #654b00;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -2px 0 rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#dark-blue {
+    background: linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    padding: 10px 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+#record-sales {
+    padding: 8px 15px 15px 15px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #d86e3a, #c54e2c);
+    box-shadow: 0 4px 0 #9d4024, 0 5px 4px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    text-shadow: 0 2px 0 #a30000;
+    transition: all 0.1s ease;
+}
+
+#record-sales:hover {
+    background: linear-gradient(to bottom, #ea7f4b, #c54e2c);
+}
+
+#record-sales:active {
+    padding: 10px 15px 13px 15px;
+    box-shadow: 0 2px 0 #9d4024, 0 3px 2px rgba(0, 0, 0, 0.75);
+    transform: translateY(2px);
+}
+
+#rich-blue {
+    background: linear-gradient(#7ebcea, #2f4b8f);
+    border-radius: 3px;
+    padding: 12px 30px;
+    color: white;
+    font-size: 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+#big-yellow {
+    background: linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%);
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    color: #311c09;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#iphone-toolbar {
+    background: linear-gradient(#98a8bd 0%, #8195af 25%, #6d86a4 100%);
+    padding: 10px;
+    color: white;
+}
+
+#iphone {
+    background: linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    border-radius: 5px;
+    padding: 7px 30px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 12px;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+#ipad-dark-grey {
+    background: linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%);
+    border-radius: 9px;
+    padding: 15px 30px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 -1px 0 black;
+}
+
+#ipad-grey {
+    background: linear-gradient(#b9b9b9 0%, #c2c2c2 20%, #afafaf 80%, #c8c8c8 100%);
+    border-radius: 9px;
+    padding: 15px 30px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    box-shadow: inset 0 1px 0 white, 0 1px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 0 white;
+}
+
+#lion-default {
+    background: linear-gradient(#e4fbff 0%, #cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: #242d35;
+    font-size: 14px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #5a61af;
+}
+
+#lion {
+    background: linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: #242d35;
+    font-size: 14px;
+    box-shadow: inset 0 1px 0 white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    border: 1px solid #9a9a9a;
+}
+
+#windows7-default {
+    background: linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    border-radius: 3px;
+    padding: 5px 30px;
+    color: black;
+    font-size: 14px;
+    box-shadow: inset 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3c7fb1;
+}
+
+#windows7 {
+    background: linear-gradient(#f2f2f2 0%, #ebebeb 49%, #dddddd 50%, #cfcfcf 100%);
+    border-radius: 3px;
+    padding: 5px 30px;
+    color: black;
+    font-size: 14px;
+    box-shadow: inset 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #707070;
+}
