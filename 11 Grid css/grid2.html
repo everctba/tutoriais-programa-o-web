@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Grid modular CSS</title>
+
+   <style>
+      :root {
+         --grid-size: 31px;
+         --grid-group-size: 124px;
+
+         --grid-line: #353535;
+         --grid-group-line: #626262;
+         --background: #151515;
+         --card-background: #242424;
+         --text: #eeeeee;
+         --accent: #ff7043;
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         margin: 0;
+         padding: 32px;
+         background: var(--background);
+         color: var(--text);
+         font-family: Arial, sans-serif;
+      }
+
+      h1 {
+         margin-top: 0;
+         font-size: 24px;
+      }
+
+      p {
+         color: #aaa;
+         line-height: 1.5;
+      }
+
+      .viewport {
+         width: 100%;
+         overflow-x: auto;
+         border: 1px solid #444;
+      }
+
+      /* Área que recebe o grid */
+      .bggrid {
+         position: relative;
+         width: 1736px;
+         height: 372px;
+         overflow: hidden;
+
+         background-color: #191919;
+
+         background-image:
+            /* Linhas verticais dos grupos */
+            linear-gradient(to right,
+               var(--grid-group-line) 1px,
+               transparent 1px),
+
+            /* Linhas horizontais dos grupos */
+            linear-gradient(to bottom,
+               var(--grid-group-line) 1px,
+               transparent 1px),
+
+            /* Linhas verticais das células */
+            linear-gradient(to right,
+               var(--grid-line) 1px,
+               transparent 1px),
+
+            /* Linhas horizontais das células */
+            linear-gradient(to bottom,
+               var(--grid-line) 1px,
+               transparent 1px);
+
+         background-size:
+            var(--grid-group-size) var(--grid-group-size),
+            var(--grid-group-size) var(--grid-group-size),
+            var(--grid-size) var(--grid-size),
+            var(--grid-size) var(--grid-size);
+
+         background-position: 0 0;
+         background-repeat: repeat;
+      }
+
+      /* Elementos posicionados pelas coordenadas */
+      .logo {
+         position: absolute;
+         width: 108px;
+         height: 108px;
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 8px;
+
+         background: var(--card-background);
+         border: 1px solid #555;
+         border-radius: 8px;
+
+         color: var(--text);
+         text-align: center;
+         font-size: 12px;
+
+         transition:
+            border-color 0.2s,
+            transform 0.2s;
+      }
+
+      .logo:hover {
+         border-color: var(--accent);
+         transform: scale(1.04);
+         z-index: 10;
+      }
+
+      .logo .symbol {
+         font-size: 32px;
+      }
+
+      .logo .coordinates {
+         color: #aaa;
+         font-size: 10px;
+      }
+
+      .panel {
+         margin-top: 24px;
+         padding: 20px;
+         border: 1px solid #444;
+         border-radius: 8px;
+         background: #202020;
+      }
+
+      code {
+         color: #ffb199;
+      }
+
+      @media (max-width: 600px) {
+         body {
+            padding: 16px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Grid modular</h1>
+
+   <p>
+      Cada célula mede 31 × 31 px. A cada quatro células,
+      uma linha mais forte marca um grupo de 124 × 124 px.
+   </p>
+
+   <div class="viewport">
+      <div class="bggrid" id="bggrid" style="--grid-size: 31px;
+                --grid-group-size: 124px;">
+
+         <div class="logo" data-xpos="0" data-ypos="0">
+            <span class="symbol">🎨</span>
+            <span>Design</span>
+            <span class="coordinates">X: 0 · Y: 0</span>
+         </div>
+
+         <div class="logo" data-xpos="1" data-ypos="0">
+            <span class="symbol">🖌️</span>
+            <span>Arte</span>
+            <span class="coordinates">X: 1 · Y: 0</span>
+         </div>
+
+         <div class="logo" data-xpos="3" data-ypos="0">
+            <span class="symbol">🧩</span>
+            <span>Ícones</span>
+            <span class="coordinates">X: 3 · Y: 0</span>
+         </div>
+
+         <div class="logo" data-xpos="6" data-ypos="1">
+            <span class="symbol">🌱</span>
+            <span>Natureza</span>
+            <span class="coordinates">X: 6 · Y: 1</span>
+         </div>
+
+         <div class="logo" data-xpos="9" data-ypos="1">
+            <span class="symbol">🐺</span>
+            <span>Mascote</span>
+            <span class="coordinates">X: 9 · Y: 1</span>
+         </div>
+
+         <div class="logo" data-xpos="12" data-ypos="2">
+            <span class="symbol">💎</span>
+            <span>Premium</span>
+            <span class="coordinates">X: 12 · Y: 2</span>
+         </div>
+
+      </div>
+   </div>
+
+   <div class="panel">
+      <h2>Como funciona</h2>
+
+      <p>
+         <code>--grid-size: 31px</code> define a distância
+         entre as linhas finas.
+      </p>
+
+      <p>
+         <code>--grid-group-size: 124px</code> define a distância
+         entre as linhas mais fortes.
+      </p>
+
+      <p>
+         <code>data-xpos</code> e <code>data-ypos</code>
+         definem a coluna e a linha de cada elemento.
+      </p>
+
+      <p>
+         Por exemplo, <code>data-xpos="6"</code> e
+         <code>data-ypos="1"</code> posicionam o elemento
+         em X = 744 px e Y = 124 px.
+      </p>
+   </div>
+
+   <script>
+      const grid = document.querySelector("#bggrid");
+
+      const styles = getComputedStyle(grid);
+
+      const groupSize = parseFloat(
+         styles.getPropertyValue("--grid-group-size")
+      );
+
+      const logos = grid.querySelectorAll(".logo");
+
+      logos.forEach((logo) => {
+         const x = Number(logo.dataset.xpos);
+         const y = Number(logo.dataset.ypos);
+
+         logo.style.left = `${x * groupSize + 8}px`;
+         logo.style.top = `${y * groupSize + 8}px`;
+      });
+   </script>
+</body>
+
+</html>

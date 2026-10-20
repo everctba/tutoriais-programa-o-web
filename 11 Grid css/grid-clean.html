@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid 4×4 — demonstração</title>
+  <style>
+    :root {
+      --cell-size: 31px;
+      --group-size: calc(var(--cell-size) * 4);
+      --grid-line: #343434;
+      --group-line: #505050;
+      --plus-color: #8b8b8b;
+      --background: #171717;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0px;
+      color: #eee;
+      background: var(--background);
+      font: 14px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #aaa;
+    }
+
+    .stage {
+      width: 100%;
+
+      overflow-x: auto;
+      border: 1px solid #3b3b3b;
+      background: #1c1c1c;
+    }
+
+    /* A malha tem células de 31 px e grupos de 4 × 4 (124 px). */
+    .bggrid {
+      position: relative;
+      /* width: 736px; */
+      height: 972px;
+      isolation: isolate;
+      background-color: #1c1c1c;
+      background-image:
+        /* linhas finas a cada 31 px */
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
+        /* linhas de grupo a cada 124 px */
+        linear-gradient(to right, var(--group-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--group-line) 1px, transparent 1px);
+      background-size:
+        var(--cell-size) var(--cell-size),
+        var(--cell-size) var(--cell-size),
+        var(--group-size) var(--group-size),
+        var(--group-size) var(--group-size);
+    }
+
+    /* Cruzes (+) nos cruzamentos dos grupos 4 × 4. */
+    .markers {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--plus-color), var(--plus-color)),
+        linear-gradient(var(--plus-color), var(--plus-color));
+      background-size: 9px 1px, 1px 9px;
+      background-position: 0 0, 0 0;
+      background-repeat: repeat;
+      /* Os sinais são desenhados por elementos para ficarem exatamente a cada 124 px. */
+      background-image: none;
+    }
+
+    .plus {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: 9px;
+      height: 9px;
+      transform: translate(-50%, -50%);
+    }
+
+    .plus::before,
+    .plus::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background: var(--plus-color);
+    }
+
+    .plus::before {
+      width: 9px;
+      height: 1px;
+      left: 0;
+      top: 4px;
+    }
+
+    .plus::after {
+      width: 1px;
+      height: 9px;
+      left: 4px;
+      top: 0;
+    }
+
+    .logos {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(14, var(--group-size));
+      grid-template-rows: repeat(3, var(--group-size));
+      z-index: 2;
+    }
+
+    .logo {
+      min-width: 0;
+      min-height: 0;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: .92;
+      filter: saturate(.9);
+    }
+
+    .logo img:hover {
+      opacity: 1;
+    }
+
+    .legend {
+      margin-top: 16px;
+      color: #999;
+      font-size: 12px;
+    }
+
+    code {
+      color: #ddd;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stage">
+    <div class="bggrid" id="grid">
+      <div class="markers" id="markers" aria-hidden="true"></div>
+
+    </div>
+  </div>
+
+  <script>
+    // Cria automaticamente um “+” em cada cruzamento de grupos de 124 px.
+    const grid = document.querySelector('#grid');
+    const markers = document.querySelector('#markers');
+    const groupSize = 124;
+    const width = grid.offsetWidth;
+    const height = grid.offsetHeight;
+
+    for (let x = 0; x <= width; x += groupSize) {
+      for (let y = 0; y <= height; y += groupSize) {
+        const plus = document.createElement('span');
+        plus.className = 'plus';
+        plus.style.setProperty('--x', `${x}px`);
+        plus.style.setProperty('--y', `${y}px`);
+        markers.appendChild(plus);
+      }
+    }
+  </script>
+</body>
+
+</html>
