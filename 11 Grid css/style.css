@@ -10,16 +10,16 @@
    --color-text-primary--inverted: var(--color-gray-900);
    --color-text-secondary: var(--color-gray-300);
    --color-link-background--hover: var(--color-purple-600);
-   --column-scale: 1920px;
+   /* --column-scale: 1920px; */
 
-   --column-count: 26;
-   --grid-width: 1000px;
-   --cell-size: 50px;
-
-   --row-count: 16;
-
+   --column-count: 60;
    --grid-width: 100%;
-   --grid-height: 800px;
+   /* --cell-size: 3%; */
+   --row-count: 60;
+   --cell-size: calc(var(--grid-width) / var(--row-count));
+
+   /* --grid-width: 100%; */
+   --grid-height: 100%;
    --cell-width: calc(var(--grid-width) / var(--column-count));
    --cell-height: calc(var(--grid-height) / var(--row-count));
 }
@@ -39,8 +39,8 @@ body {
 }
 
 .tamanho {
-   min-height: 100vh;
-   width: 100%;
+   /* min-height: 74vh; */
+   /* width: 100%; */
 }
 
 .bg-background {
@@ -49,7 +49,7 @@ body {
 
 .container {
 
-   width: 1920px;
+   width: 100%;
    margin: auto;
 }
 
@@ -85,7 +85,7 @@ body {
    /* background-size: calc(100%/ var(--column-count)); */
    /* background-size: calc(var(--column-count)/ var(--column-count)) 100%; */
 
-   background-size: var(--cell-height);
+   background-size: var(--cell-width);
    width: 100%;
    aspect-ratio: 26 / 26;
    /* background-position-x: -1px; */
@@ -93,9 +93,10 @@ body {
 }
 
 .outline-color {
-   outline-width: 1px;
+   outline-width: 2px;
    outline-style: solid;
    outline-color: rgb(48 48 48);
+   outline-offset: -2px;
 }
 
 
